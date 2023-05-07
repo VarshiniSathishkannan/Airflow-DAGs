@@ -36,11 +36,4 @@ t2 = BashOperator(
     depends_on_past=False
 )
 
-# t3 = BashOperator(
-#     task_id='print date',
-#     bash_command='date',
-#     dag=dag,
-#     depends_on_past=False
-# )
-
 t1 >> t2

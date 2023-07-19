@@ -1,0 +1,6 @@
+astro dev init
+astro dev start
+astro config set webserver.port 8085
+
+https://docs.astronomer.io/astro/cli/get-started-cli
+

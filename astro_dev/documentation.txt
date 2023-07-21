@@ -4,3 +4,36 @@ astro config set webserver.port 8085
 
 https://docs.astronomer.io/astro/cli/get-started-cli
 
+3 core components:
+1. web server
+2. scheduler
+3. metadata database
+
+others
+4. executor
+5. worker
+
+3 ways of interacting with Airflow
+1. UI
+2. Command Line Interface
+3. Rest API
+
+The effective DAG run starts after start date + schedule interval
+
+start date - required field if task is present
+schedule_interval default - 24hrs
+execution date
+end date 
+
+if start date is in the past, then airflow triggers all the non triggered instance between the start and current date at the same time. We will end up with many dag instances running simultaneously.
+this can be disables by catchup set to false 
+
+schedule_interval :
+
+cron expression - absolute 
+timedelta function - relative 
+@daily, @weekly
+None - can only manually trigger the DAG
+
+XComs - cross communication, sharing data between tasks
+

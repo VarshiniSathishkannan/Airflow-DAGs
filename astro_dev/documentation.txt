@@ -37,3 +37,7 @@ None - can only manually trigger the DAG
 
 XComs - cross communication, sharing data between tasks
 
+celery cluster - distributed queue - for scaling Airflow
+
+2 dags with same dag id will not throw any error but it is difficult to identify from the UI
+
